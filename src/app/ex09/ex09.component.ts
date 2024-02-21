@@ -26,14 +26,18 @@ export class Ex09Component {
   }
 
   sortedBy(value:any){
-    if (value === "descending"){
+
+    if (value === "name"){
       this.employees.sort((n1,n2)=>(n1.name > n2.name ? 1:-1));
-      console.log(this.employees)
-      console.log("primero")
     }
-    if(value === "ascending"){
-      this.employees.sort((n1,n2)=>(n1.name > n2.name ? -1:1));
-      console.log("segundo")
+    if (value === "position"){
+      this.employees.sort((n1,n2)=>(n1.position > n2.position ? 1:-1));
+    }
+    if (value === "salary"){
+      this.employees.sort((n1,n2)=>(n1.salary > n2.salary ? 1:-1));
+    }
+    if (value === "email"){
+      this.employees.sort((n1,n2)=>(n1.email > n2.email ? 1:-1));
     }
 
   }
