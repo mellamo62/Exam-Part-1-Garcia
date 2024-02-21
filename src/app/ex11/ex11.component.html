@@ -1,0 +1,11 @@
+<h1>Exam</h1>
+
+<h2>Create an employee</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <a>Name:</a><input type="text" formControlName="name">
+  <a>Position:</a><input type="text" formControlName="position">
+  <a>Salary:</a><input type="number" formControlName="salary">
+  <a>Email:</a><input type="text" formControlName="email">
+
+  <button type="submit" [disabled]="!form.valid">Submit</button>
+</form>
